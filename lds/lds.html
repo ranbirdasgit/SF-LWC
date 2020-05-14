@@ -1,0 +1,37 @@
+<template>
+   
+    Lighting record view form exmple with controller field name
+
+    <lightning-record-form object-api-name={objectApiName} record-id={recordId} mode="view" columns="2" fields={fieldname}></lightning-record-form>
+   
+    
+    Lighting record view form exmple with direct field name
+    
+    <lightning-record-view-form object-api-name={objectApiName} record-id={recordId}>
+        <lightning-output-field field-name="Name"></lightning-output-field>
+        <lightning-output-field field-name="Active__c"></lightning-output-field>
+    </lightning-record-view-form>
+
+
+    Lightning record edit form
+
+<lightning-record-edit-form object-api-name={objectApiName} record-id={recordId} onsuccess={handlesuccess}>
+    <lightning-input-field field-name="Name"></lightning-input-field>
+    <lightning-button type="submit" label="submit" variant="brand"></lightning-button>
+</lightning-record-edit-form>
+
+
+    Lightning record create
+
+<lightning-record-form object-api-name={objectApiName} fields={fieldname} mode="edit" onsuccess={handlesuccess}></lightning-record-form>
+
+
+    getfieldvalue UI Record Api
+
+    <p>{fieldvalue}</p>
+
+    create a record using UI API
+
+<lightning-input label="name" name="namefetch"></lightning-input>
+<lightning-button label="save" onclick={saverecord}></lightning-button>
+</template>
